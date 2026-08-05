@@ -1,0 +1,11 @@
+MAINTENANCE LOG
+Date: 2026-05-29
+Asset: Cooling Water Motor M-03
+Reported symptom: Rising high-frequency noise, no change at 1x. Occasional
+rattly bearing sound.
+Analysis: Envelope analysis showed energy at outer-race defect frequency
+(BPFO) with rising broadband high-frequency content - early outer-race bearing
+defect. No unbalance/misalignment indicators.
+Action taken: Scheduled bearing replacement; corrected under-greasing found on
+inspection.
+Outcome: Bearing replaced before failure. Root cause: inadequate lubrication.

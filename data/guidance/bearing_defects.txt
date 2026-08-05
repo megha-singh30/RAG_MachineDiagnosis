@@ -1,0 +1,17 @@
+FAULT: Rolling-Element Bearing Defect
+
+Vibration signature: energy at high, non-synchronous bearing defect
+frequencies rather than at 1x. Outer race defects appear at BPFO, inner race
+at BPFI, rolling elements at BSF, and cage at FTF. Early defects show up as
+raised high-frequency broadband noise and are best seen with envelope
+(demodulation) analysis.
+
+Distinguishing clue: NON-integer multiples of running speed and rising
+high-frequency noise. Unlike unbalance/misalignment, the energy is not at 1x
+or its harmonics.
+
+Typical causes: fatigue spalling, poor lubrication, contamination, electrical
+fluting, improper installation.
+
+Recommended action: trend the defect frequencies and envelope energy; plan a
+bearing replacement before the defect broadens. Review lubrication practice.

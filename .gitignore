@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Other files and directories
+COURSE.md
+PROGRESS.md
+SESSION_*.md
+session*/
+/doc
+session_*.md

@@ -1,0 +1,6 @@
+fault,primary_frequency,direction,harmonics,distinguishing_clue,recommended_action
+Unbalance,1x,radial,low,"1x dominant, low harmonics, low axial",Field balance the rotor
+Misalignment,1x and 2x,axial + radial,"2x, sometimes 3x","high 2x and high axial vibration",Correct coupling alignment
+Bearing defect,BPFO/BPFI/BSF/FTF,radial,non-integer,"non-synchronous high-freq, envelope energy",Replace bearing; review lubrication
+Mechanical looseness,many 1x harmonics,directional,"2x,3x,4x and 0.5x","long harmonic series, erratic phase",Torque bolts; check fits and structure
+Resonance,at natural frequency,varies,none,"amplitude speed-sensitive, 180 phase shift",Move operating speed or shift natural freq

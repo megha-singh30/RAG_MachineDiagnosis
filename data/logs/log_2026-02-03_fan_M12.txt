@@ -1,0 +1,10 @@
+MAINTENANCE LOG
+Date: 2026-02-03
+Asset: Induced Draft Fan M-12
+Reported symptom: High horizontal vibration at running speed, ~1x dominant,
+low axial. Amplitude grew after a dust-laden operating period.
+Analysis: Spectrum showed a clean 1x peak, minimal 2x, low axial - consistent
+with unbalance from dust buildup on the fan blades.
+Action taken: Cleaned blades, then two-plane field balance. Vibration returned
+to ISO zone A.
+Outcome: Resolved. Recommended periodic blade cleaning.

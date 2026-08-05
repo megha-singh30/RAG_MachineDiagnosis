@@ -1,0 +1,16 @@
+FAULT: Rotor Mass Unbalance
+
+Vibration signature: dominant peak at 1x running speed, primarily in the
+radial direction (horizontal/vertical). Amplitude is steady and increases
+roughly with the square of running speed. Phase is stable and repeatable;
+horizontal and vertical phase differ by about 90 degrees on the same bearing.
+
+Distinguishing clue: energy concentrated at 1x with LOW harmonic content and
+low axial vibration. If strong 2x/3x harmonics or high axial motion appear,
+suspect misalignment instead.
+
+Typical causes: material buildup or loss on the rotor, fouling, a missing
+balance weight, or a lost blade/vane.
+
+Recommended action: field balance the rotor (single- or two-plane). Inspect
+for fouling or damage before balancing.

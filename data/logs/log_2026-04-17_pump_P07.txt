@@ -1,0 +1,10 @@
+MAINTENANCE LOG
+Date: 2026-04-17
+Asset: Boiler Feed Pump P-07
+Reported symptom: Elevated 2x running-speed vibration with high axial motion,
+appeared after a coupling change.
+Analysis: High 2x plus axial and a ~180 degree phase shift across the coupling
+pointed to angular misalignment rather than unbalance.
+Action taken: Laser alignment; found and corrected a soft foot and mild pipe
+strain.
+Outcome: Resolved. 2x and axial dropped to acceptable levels.

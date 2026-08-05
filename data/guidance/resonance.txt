@@ -1,0 +1,15 @@
+FAULT: Resonance / Critical Speed
+
+Vibration signature: a large amplitude peak when running speed coincides with
+a natural frequency of the machine or structure. Amplitude is very sensitive
+to speed; a roughly 180-degree phase change occurs as speed passes through
+the resonance. Amplitude drops sharply if speed moves away from the critical.
+
+Distinguishing clue: amplitude depends strongly on SPEED and a phase shift
+through the peak - not tied to a specific fault frequency.
+
+Typical causes: operating near a structural or rotor natural frequency, often
+after a speed change or a stiffness/mass change.
+
+Recommended action: confirm with a coast-down/run-up test; change operating
+speed if possible, or modify stiffness/mass to move the natural frequency.

@@ -1,0 +1,15 @@
+FAULT: Shaft Misalignment
+
+Vibration signature: high vibration at 1x AND 2x running speed, with 2x often
+comparable to or greater than 1x. Strong AXIAL vibration is the hallmark.
+Angular misalignment shows high axial 1x; parallel (offset) misalignment
+shows high radial 2x. Phase across the coupling shifts about 180 degrees.
+
+Distinguishing clue: presence of 2x (and sometimes 3x) harmonics plus high
+axial vibration separates misalignment from simple unbalance.
+
+Typical causes: poor coupling alignment, thermal growth, soft foot, pipe
+strain pulling the machine out of position.
+
+Recommended action: check and correct coupling alignment (laser alignment).
+Verify soft foot and check for pipe strain before re-aligning.

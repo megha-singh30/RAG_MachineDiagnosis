@@ -1,0 +1,14 @@
+FAULT: Mechanical Looseness
+
+Vibration signature: many harmonics of running speed (1x, 2x, 3x, 4x...),
+and often 0.5x sub-harmonics. Waveform is often truncated or erratic. Highly
+directional (much worse in one direction). Phase is unstable.
+
+Distinguishing clue: a long series of running-speed harmonics (and possible
+half-order components) rather than a single clean peak. Erratic phase.
+
+Typical causes: loose hold-down bolts, worn bearing fits, structural
+looseness, cracked frames or bases.
+
+Recommended action: inspect and torque mounting bolts, check bearing fits and
+clearances, look for structural cracks.
