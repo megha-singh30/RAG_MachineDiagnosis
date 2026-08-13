@@ -1,0 +1,14 @@
+# ── Core RAG stack ──────────────────────────────────────────────
+langchain               # pipeline framework (loaders, splitters, glue)
+langchain-community     # community integrations (Chroma, HF embeddings)
+chromadb                # vector database (stores + searches embeddings)
+sentence-transformers   # embedding model: all-MiniLM-L6-v2 (text -> vectors)
+
+# ── Data handling ───────────────────────────────────────────────
+numpy                   # vector math
+pandas                  # reads the structured fault_table.csv
+scikit-learn            # utilities (and the Session-1 fallback embedder)
+
+# ── Added in later sessions (uncomment when you reach them) ──────
+# anthropic             # Session 4: LLM generation (needs ANTHROPIC_API_KEY)
+# streamlit             # Session 7: optional demo UI
