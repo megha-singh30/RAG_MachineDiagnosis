@@ -8,6 +8,7 @@ Run:   python ingest.py      (creates ./chroma_db, then runs a test query)
 
 from pathlib import Path
 import pandas as pd
+from langchain_chroma import Chroma
 
 # LangChain building blocks
 from langchain_core.documents import Document          # a Document = text + metadata
@@ -32,7 +33,7 @@ DB_DIR = "chroma_db"    # where the vector database is written on disk
 # --------------------------------------------------------------------------
 # FUNCTION 1 - load every file into a uniform list of Document objects.
 # A Document has just two parts: page_content (the text) and metadata (a dict).
-# This is where structured (CSV) and unstructured (txt) become one list.
+#
 # --------------------------------------------------------------------------
 def load_documents():
     docs = []
