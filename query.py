@@ -9,6 +9,9 @@ Run:   python query.py "high 2x vibration with strong axial motion"
 
 import os
 import sys
+from dotenv import load_dotenv
+
+load_dotenv()  # reads .env and puts ANTHROPIC_API_KEY into the environment
 
 from langchain_community.vectorstores import Chroma
 try:
@@ -67,9 +70,9 @@ def generate(prompt, chunks):
 def answer_question(question, k=3):
     store = get_store()
     chunks = retrieve(store, question, k=k)
-    print('/nChunks retrieved: ',chunks)
+    print('\nnChunks retrieved: ',chunks)
     prompt = build_prompt(question, chunks)
-    print('/Prompt generated: ',prompt)
+    print('\nPrompt generated: ',prompt)
     answer = generate(prompt, chunks)
     print(f"Q: {question}\n")
     print(answer)

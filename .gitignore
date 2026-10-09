@@ -224,3 +224,7 @@ SESSION_*.md
 session*/
 /doc
 session_*.md
+.venv/
+chroma_db/
+.env
+__pycache__/
