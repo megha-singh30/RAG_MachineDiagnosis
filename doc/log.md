@@ -30,3 +30,8 @@ Unstructured (the guidance .txt files, written as prose), semi-structured (the m
 
 ## Q3. If a user asks about a fault whose answer isn't in the corpus, what happens — and what does that say about corpus quality?  
 The retriever never returns nothing — it's a nearest-neighbor search, so it always returns the top-k closest chunks, even when the true answer isn't present. For an out-of-corpus question those chunks are irrelevant-but-nearest. Whether the system correctly says "not in the provided context" depends entirely on the grounding instruction and the model honoring it; a weak prompt or model will instead answer from the wrong chunks — a hallucination. The lesson: answer quality is capped by corpus coverage. Gaps become refusals in the best case and hallucinations in the worst
+
+
+## Day 03 -- Session-3
+Freezing libraries
+pip freeze > requirements_lock.txt
