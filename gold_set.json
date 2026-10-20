@@ -1,0 +1,22 @@
+[
+  {"question": "high 1x vibration, low harmonics, low axial - what fault?",
+   "relevant_sources": ["unbalance.txt", "fault_table.csv"]},
+  {"question": "high 2x with strong axial vibration after a coupling change",
+   "relevant_sources": ["misalignment.txt", "fault_table.csv", "log_2026-04-17_pump_P07.txt"]},
+  {"question": "rising high-frequency noise, nothing at 1x, rattly bearing sound",
+   "relevant_sources": ["bearing_defects.txt", "fault_table.csv", "log_2026-05-29_motor_M03.txt"]},
+  {"question": "many running-speed harmonics and erratic phase, loose feeling",
+   "relevant_sources": ["looseness.txt", "fault_table.csv"]},
+  {"question": "amplitude peaks sharply at a certain speed with a 180 degree phase shift",
+   "relevant_sources": ["resonance.txt", "fault_table.csv"]},
+  {"question": "how do I fix rotor unbalance",
+   "relevant_sources": ["unbalance.txt", "fault_table.csv"]},
+  {"question": "dust buildup on fan blades caused high vibration",
+   "relevant_sources": ["log_2026-02-03_fan_M12.txt", "unbalance.txt"]},
+  {"question": "BPFO outer race bearing defect detected by envelope analysis",
+   "relevant_sources": ["bearing_defects.txt", "log_2026-05-29_motor_M03.txt"]},
+  {"question": "what recommended action for shaft misalignment",
+   "relevant_sources": ["misalignment.txt", "fault_table.csv"]},
+  {"question": "vibration amplitude grows with the square of running speed",
+   "relevant_sources": ["unbalance.txt"]}
+]
