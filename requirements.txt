@@ -14,3 +14,4 @@ scikit-learn==1.3.0            # utilities (and the Session-1 fallback embedder)
 # ── Added in later sessions (uncomment when you reach them) ──────
 # anthropic             # Session 4: LLM generation (needs ANTHROPIC_API_KEY)
 # streamlit             # Session 7: optional demo UI
+# pip install anthropic python-dotenv

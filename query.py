@@ -70,9 +70,9 @@ def generate(prompt, chunks):
 def answer_question(question, k=3):
     store = get_store()
     chunks = retrieve(store, question, k=k)
-    print('\nnChunks retrieved: ',chunks)
+    print('\nChunks retrieved: \n',chunks)
     prompt = build_prompt(question, chunks)
-    print('\nPrompt generated: ',prompt)
+    print('\nPrompt generated: \n',prompt)
     answer = generate(prompt, chunks)
     print(f"Q: {question}\n")
     print(answer)
