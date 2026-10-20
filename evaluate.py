@@ -1,8 +1,9 @@
 """
-Session 5 - Retrieval evaluation.
-Measures recall@k and MRR of the retriever against a labelled gold set.
+Session 5 - Retrieval evaluation with difficulty breakdown.
+Measures recall@k and MRR of the retriever against a labelled gold set,
+reported overall AND split by difficulty (easy vs hard/paraphrased).
 
-Run:  python evaluate.py        (uses chroma_db/ from Session 3 and gold_set.json)
+Run:  python evaluate.py
 """
 
 import json
@@ -19,42 +20,44 @@ GOLD = "gold_set.json"
 K = 3
 
 
-# reconnect to the vector store built in Session 3 (same embedding model).
 def get_store():
     emb = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     return Chroma(persist_directory=DB_DIR, embedding_function=emb)
 
 
-# read the human-labelled gold set: list of {question, relevant_sources}.
 def load_gold_set():
     return json.loads(Path(GOLD).read_text(encoding="utf-8"))
 
 
-# score recall@k and MRR across the gold set.
+def _score_one(store, item, k):
+    """Return (hit, reciprocal_rank, retrieved_sources) for one question."""
+    relevant = set(item["relevant_sources"])
+    got = [r.metadata.get("source", "?") for r in store.similarity_search(item["question"], k=k)]
+    rank = next((i + 1 for i, s in enumerate(got) if s in relevant), None)
+    return (rank is not None), (1.0 / rank if rank else 0.0), got
+
+
 def evaluate(store, gold, k=K):
-    hits = 0                 # how many questions had a correct doc in top-k
-    rr_total = 0.0           # sum of reciprocal ranks (for MRR)
-
+    # buckets: 'all' plus one per difficulty label present in the gold set
+    buckets = {}
     for item in gold:
-        q = item["question"]
-        relevant = set(item["relevant_sources"])
-        results = store.similarity_search(q, k=k)
-        got = [r.metadata.get("source", "?") for r in results]
+        hit, rr, got = _score_one(store, item, k)
+        for key in ("all", item.get("difficulty", "unlabelled")):
+            b = buckets.setdefault(key, {"hits": 0, "rr": 0.0, "n": 0})
+            b["hits"] += hit; b["rr"] += rr; b["n"] += 1
 
-        # rank (1-based) of the FIRST retrieved doc that is relevant
-        rank = next((i + 1 for i, s in enumerate(got) if s in relevant), None)
-        hit = rank is not None
-        hits += hit
-        rr_total += (1.0 / rank) if rank else 0.0
-
-        print(f"[{'PASS' if hit else 'MISS'}] {q}")
+        tag = item.get("difficulty", "?")
+        print(f"[{'PASS' if hit else 'MISS'}] ({tag}) {item['question']}")
         for i, s in enumerate(got, 1):
-            mark = "*" if s in relevant else " "
+            mark = "*" if s in set(item["relevant_sources"]) else " "
             print(f"      {mark} #{i} {s}")
 
-    n = len(gold)
-    print(f"\nrecall@{k}: {hits}/{n} = {hits/n:.0%}")
-    print(f"MRR:      {rr_total/n:.2f}")
+    print("\n--- Results ---")
+    for key in ["all", "easy", "hard"]:
+        if key in buckets:
+            b = buckets[key]
+            print(f"{key:5}  recall@{k}: {b['hits']}/{b['n']} = {b['hits']/b['n']:.0%}"
+                  f"   MRR: {b['rr']/b['n']:.2f}")
 
 
 if __name__ == "__main__":
